@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+print "\nExercício 11" # Exercício 11
+print "How old are you?", # Observe o uso da vírgula ao final
+age = raw_input()
+print "How tall are you", # Observe o uso da vírgula ao final
+height = raw_input()
+print "How much do you weigh?", # Observe o uso da vírgula ao final
+weight = raw_input()
+
+print "So, you're %r old, %r tall and %r heavy." % (age, height, weight)
+
+print "\nExercício 12" # Exercício 12
+age = raw_input("How old are you? ")
+height = raw_input("How tall are you? ")
+weight = raw_input("How much do you weigh? ")
+
+print "So, you're %r old, %r tall and %r heavy." % (age, height, weight)
