@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+print "\nExercício 15" # Exercício 15
+# Rode o programa digitando no Terminal: python lpthw.py ex15_sample.txt
+# Prepare o arquivo ex15_sample.txt antes!
+from sys import argv
+
+script, filename = argv # Faz script ser igual a lpthw.py e filename ser ex15_sample.txt
+
+txt = open(filename) # txt abre o arquivo (filename)
+
+print "Here's your file %r:" % filename
+print txt.read() # txt.read() passa o conteúdo do arquivo (filename) para txt
+
+print "Type the filename again:"
+file_again = raw_input("> ")
+
+txt_again = open(file_again)
+
+print txt_again.read()
