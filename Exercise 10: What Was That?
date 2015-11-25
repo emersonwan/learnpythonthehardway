@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+print "\nExercício 10" # Exercício 10
+# escape double-quote inside string
+print "Eu, Emerson: I am 5'11\" tall"
+# escape single-quote inside string
+print 'I\'m 5\'11" tall'
+
+tabby_cat = "\tI'm tabbed in."
+persian_cat = "I'm split\non a line"
+backslash_cat = "I'm \\ a \\ cat."
+
+fat_cat = """
+I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass
+"""
+
+print tabby_cat # Coloca um tab antes da frase
+print persian_cat # Quebra a frase depois da palavra "split"
+print backslash_cat # Adiciona dois backslashes
+print fat_cat # A string fat_cat é tudo que está entre as aspas triplas
+
+# Exercícios complementares de Escape Sequences
+print "Emerson\\Wan" # Backslash (\)
+print "Emerson\'Wan" # Single-quote (')
+print "Emerson\"Wan" # Double-quote (")
+print "Emerson\aWan ASCII bell (BEL)" # ASCII bell (BEL)
+print "Emerson\bWan" # ASCII backspace (BS)
+print "Emerson\fWan" # ASCII formfeed (FF)
+print "Emerson\nWan" # ASCII linefeed (LF)
+print u"\N{SOLIDUS} \N{BLACK SPADE SUIT}" # Character named name in the Unicode database (Unicode only)
+print "Emerson\rWan" # Carriage Return (CR)
+print "Wan\twill\tChange\tthe\tWorld" # Horizontal Tab (TAB)
+print "Imprime", u"\u0024", u"\u20AC", "em Unicode 16-bit" # Character with 16-bit hex value xxxx (Unicode only)
+print "Imprime", u"\U00000024", u"\U000020AC","em Unicode 32-bit" # Character with 32-bit hex value xxxxxxxx (Unicode only)
+print "Wan\vWan" # ASCII vertical tab (VT)
+print "Imprime", "\101\102\103", "em octal value" # Character with octal value ooo
+print "Imprime", "\x41\x42\x43", "em hex value" # Character with hex value hh
+
+while True:
+    for i in ["/","-","|","\\","|"]:
+        print "%s\r" % i, # \r	é Carriage Return (CR)
