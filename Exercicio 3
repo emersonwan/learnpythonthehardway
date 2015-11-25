@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+print "\nExercício 3" # Exercício 3
+print "I will now count my chickens:"
+
+print "Hens", 25 + 30 / 6
+print "Roosters", 100 - 25 * 3 % 4
+# É rodado como 100 - (25 * 3) % 4 = 100 - 75 % 4 = 100 - 3 = 97
+
+print "Now I will count the eggs:"
+
+print 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6
+# É rodado como 3 + 2 + 1 - 5 + (4 % 2) - (1 / 4) + 6
+
+print "Is it true that 3 + 2 < 5 - 7?"
+
+print 3 + 2 < 5 - 7
+
+print "What is 3 + 2?", 3 + 2
+print "What is 5 - 7?", 5 - 7
+
+print "Oh, that's why it's False."
+
+print "How about some more."
+
+print "Is it greater?", 5 > -2
+print "Is it greater or equal?", 5 >= -2
+print "Is it less or equal?", 5 <= -2
+
+# Diferenças de colocar um número fracionário na conta
+print 7 / 4 # Resposta dá um número inteiro
+print 7.0 / 4.0 # Resposta dá um número float
+print 7.0 / 4 # Resposta dá um número float
+print 7 / 4.0 # Resposta dá um número float
