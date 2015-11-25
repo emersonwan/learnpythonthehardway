@@ -1,5 +1,10 @@
+# -*- coding: utf-8 -*-
+print "\nExercício 17" # Exercício 17
+# Run this one with two arguments: the file to copy from and the file to copy it to
+# Execute python lpthw.py test.txt new_file.txt
 from sys import argv
 from os.path import exists
+# O comando exists retorna True se um arquivo existe, baseado no seu nome em uma string como um argumento. Retorna False, se não.
 
 script, from_file, to_file = argv
 
