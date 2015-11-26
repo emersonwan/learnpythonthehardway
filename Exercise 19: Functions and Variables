@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-from random import randint
 print "\nExercício 19" # Exercício 19
+from random import randint
+
 def cheese_and_crackers(cheese_count, boxes_of_crackers):
 	print "You have %d cheeses!" % cheese_count
 	print "You have %d boxes of crackers!" % boxes_of_crackers
