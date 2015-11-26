@@ -1,0 +1,72 @@
+# -*- coding: utf-8 -*-
+# Rodar como: python lpthw.py
+print "\nExercício 25" # Exercício 25
+def break_words(stuff):
+    """This function will break up words for us."""
+    words = stuff.split(' ')
+    return words
+
+def sort_words(words):
+    """Sorts the words."""
+    return sorted(words)
+
+def print_first_word(words):
+    """Prints the first word after popping it off."""
+    word = words.pop(0) # O índice zero retorna o primeiro item na lista
+    print word
+
+def print_last_word(words):
+    """Prints the last word after popping it off."""
+    word = words.pop(-1) # Retorna a palavra a -1 de zero
+    print word
+
+def sort_sentence(sentence):
+    """Takes in a full sentence and returns the sorted words."""
+    words = break_words(sentence)
+    return sort_words(words)
+
+def print_first_and_last(sentence):
+    """Prints the first and last words of the sentence."""
+    words = break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+def print_first_and_last_sorted(sentence):
+    """Sorts the words then prints the first and last one."""
+    words = sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+print "Imprime tudo"
+sentence = "All good things come to those who wait."
+print sentence # Imprime tudo
+
+print "Palavras splitadas"
+words = break_words(sentence)
+print words # Imprime palavras splitadas
+
+print "sort_words(words)"
+sorted_words = sort_words(words) # Coloca as palavras em ordem alfabética
+print sorted_words # Imprime a frase ordenada
+
+print "print_first_word(words)"
+print_first_word(words) # Imprime a primeira palavra da lista
+
+print "print_last_word(words)"
+print_last_word(words) # Imprime a última palavra da lista
+
+print "print_first_word(sorted_words)"
+print_first_word(sorted_words)
+
+print "print_last_word(sorted_words)"
+print_last_word(sorted_words)
+
+print "sort_sentence(sentence)"
+sorted_words = sort_sentence(sentence) # Quebra a frase em palavras e ordena
+print sorted_words
+
+print "print_first_and_last(sentence)" # Imprime primeira e última palavras da frase original
+print_first_and_last(sentence)
+
+print "print_first_and_last_sorted(sentence)" # Imprime primeira e última palavras da frase ordenada
+print_first_and_last_sorted(sentence)
