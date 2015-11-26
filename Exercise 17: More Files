@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 print "\nExercício 17" # Exercício 17
+# Execute: echo "This is a test file." > test.txt # Este comando grava o texto "This is a test file." no arquivo test.txt
+# Execute: $ cat test.txt # Este comando lê o conteúdo de test.txt.
+# Dá como resposta: This is a test file.
+
 # Run this one with two arguments: the file to copy from and the file to copy it to
 # Execute python lpthw.py test.txt new_file.txt
 from sys import argv
