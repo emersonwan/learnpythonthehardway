@@ -4,7 +4,7 @@ print "\nExercício 33" # Exercício 33
 i = 5
 numbers = []
 
-while i < 11:
+while i < 11: # Coloca até i = 10 na lista numbers
 	print "At the top i is %d" % i # O valor de i antes de append
 	numbers.append(i)
 
