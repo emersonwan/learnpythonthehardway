@@ -1,0 +1,52 @@
+# -*- coding: utf-8 -*-
+# Rodar como: python lpthw.py
+print "\nExercício 39" # Exercício 39 (Examples)
+
+things = ['a', 'b', 'c', 'd'] # Cria lista "things"
+print things[1] # Imprime item no índice 1
+# Você deve ver: b
+
+things[1] = 'z' # Troca item do índice 1 por "z"
+print things[1] # Imprime item no índice 1
+# Você deve ver: z
+
+print things
+# Você deve ver: ['a', 'z', 'c', 'd']
+
+stuff = {'name': 'Zed', 'age': 39, 'height': 6 * 12 + 2} # Cria um dicionário
+print stuff # Imprime dicionário
+print stuff['name'] # Imprime o conteúdo do key 'name'
+# Você deve ver: Zed
+
+print stuff['age'] # Imprime o conteúdo do key 'age'
+# Você deve ver: 39
+
+print stuff['height'] # Imprime o conteúdo do key 'height'
+# Você deve ver: 74
+
+stuff['city'] = "San Francisco" # Insere key 'city' e conteúdo "San Francisco"
+print stuff['city'] # Imprime o conteúdo do key 'city'
+# Você deve ver: San Francisco
+
+stuff[1] = "Wow" # Insere key '1' e conteúdo "Wow"
+stuff[2] = "Neato" # Insere key '2' e conteúdo "Neato"
+print stuff[1] # Imprime o conteúdo do key '1'
+# Você deve ver: Wow
+
+print stuff[2] # Imprime o conteúdo do key '2'
+# Você deve ver: Neato
+
+print stuff
+# Você deve ver: {'city': 'San Francisco', 2: 'Neato', 'name': 'Zed', 1: 'Wow', 'age': 39, 'height': 74}
+
+del stuff['city'] # Apaga registro com key 'city'
+print stuff
+# Você deve ver: {2: 'Neato', 'name': 'Zed', 1: 'Wow', 'age': 39, 'height': 74}
+
+del stuff[1] # Apaga registro com key '1'
+print stuff
+# Você deve ver: {2: 'Neato', 'name': 'Zed', 'age': 39, 'height': 74}
+
+del stuff[2] # Apaga registro com key '2'
+print stuff
+# Você deve ver: {'name': 'Zed', 'age': 39, 'height': 74}
