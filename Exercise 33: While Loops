@@ -8,7 +8,7 @@ while i < 11:
 	print "At the top i is %d" % i # O valor de i antes de append
 	numbers.append(i)
 
-	i = i + 1
+	i += 1
 	print "Numbers now: ", numbers # Imprime a lista com o valor de i antes de append
 	print "At the bottom i is %d" % i # O valor de i depois de append
 	# Repete o while-loop
