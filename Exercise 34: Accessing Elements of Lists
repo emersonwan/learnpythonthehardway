@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+# Rodar como: python lpthw.py
+print "\nExercício 34" # Exercício 34
+animals = ['bear', 'tiger', 'penguin', 'zebra']
+bear = animals[0] # Lê o item número zero, que é "bear"
+print animals
+print bear
+print len(animals) # len(animals) é igual a 4
+
+i = 0
+while i < len(animals):
+	print "Animal na posição %d: " % i, animals[i]
+	i += 1
