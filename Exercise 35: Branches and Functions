@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+# Rodar como: python lpthw.py
+print "\nExercício 35" # Exercício 35
+from sys import exit
+
+def gold_room():
+	print "This room is full of gold. How much do you take?\nType a number."
+
+	choice = raw_input("> ")
+	how_much = int(choice)
+
+	if how_much < 50: # Abaixo de 50 responde que não é ganancioso
+		print "Nice, you're not greedy. You win!"
+		exit(0) # Sai do programa
+	else: # Acima de 50, responde greedy bastard e morre
+		dead("You greedy bastard!")
+
+def bear_room(): # bear_room() tem dois retornos iniciais: take honey e taunt bear
+	print "There is a bear here."
+	print "The bear has a bunch of honey."
+	print "The fat bear is in front of another door."
+	print "How are you going to move the bear?"
+	print "take honey or taunt bear?"
+	bear_moved = False # Urso está imóvel
+
+	while True:
+		choice = raw_input("> ")
+
+		if choice == "take honey":
+			dead("The bear looks at you then slaps your face off.")
+		elif choice == "taunt bear" and not bear_moved:
+			print "The bear has moved from the door. You can go through it now.\ntaunt bear or open door?"
+			bear_moved = True # Uso se moveu
+		elif choice == "taunt bear" and bear_moved:
+			dead("The bear gets pissed off and chews your leg off.")
+		elif choice == "open door" and bear_moved:
+		# Comando open door só é aceito se urso se moveu
+		# Se urso não se moveu, responde "I got no idea what that means"
+			gold_room()
+		else:
+			print "I got no idea what that means."
+
+def cthulhu_room():
+	print "Here you see the great evil Cthulhu."
+	print "He, it, whatever stares at you and you go insane."
+	print "Do you flee for your life or eat your head?\nflee or head?"
+
+	choice = raw_input("> ")
+
+	if "flee" in choice: # Se responde flee, vai para início do jogo
+		start()
+	elif "head" in choice: # Se responde head, morre
+		dead("Well that was tasty!")
+	else: # Se não respondeu flee ou head, volta para a pergunta
+		cthulhu_room()
+
+def dead(why): # Escreve uma mensagem + "Good job!" e termina programa
+	print why, "Good job!"
+	exit(0)
+
+def start(): # start() tem três retornos: vai para bear_room(),
+	# vai para cthulu_room() ou dead()
+	print "You are in a dark room."
+	print "There is a door to your right and left."
+	print "Which one do you take?"
+
+	choice = raw_input("> ")
+
+	if choice == "left":
+		bear_room()
+	elif choice == "right":
+		cthulhu_room()
+	else:
+		dead("You stumble around the room until you starve.")
+
+start() # Programa começa aqui
