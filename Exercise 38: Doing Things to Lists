@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+# Rodar como: python lpthw.py
+print "\nExercício 38" # Exercício 38
+ten_things = "Apple#Oranges#Crow#Telephone#Light#Sugar"
+
+stuff = ten_things.split('#') # split separa as palavras no marcador '#'
+print "Wait. There are not 10 things in that list. There are %d. Let's fix that." % len(stuff)
+print stuff
+
+more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+
+while len(stuff) < 10: # Repete loop até que len(stuff) conte até 10
+	next_one = more_stuff.pop() # Retira o último da lista more_stuff
+	print "Adding: ", next_one
+	stuff.append(next_one) # Acrescenta a palavra ao fim da lista stuff
+	print "There are %d items now." % len(stuff)
+
+print "There we go: ", stuff # Mostram as 10 palavras de "stuff"
+
+print "Let's do some things with stuff."
+
+print "stuff[1]:", stuff[1] # É o segundo da lista
+print "stuff[-1]: ", stuff[-1] # whoa! fancy
+# O índice -1 corresponde ao último item da lista
+print "stuff.pop(): ", stuff.pop() # Retira o último item da lista como se fosse a carta do topo do baralho
+print "' '.join(stuff): ", ' '.join(stuff) # what? cool! # Une as palavras soltas com um espaço entre elas
+# Observe que o item "Corn" não está mais na lista
+print "'#'.join(stuff[3:6])", '#'.join(stuff[3:6]) # super stellar!
+# Aparecem só as palavras 3 a 5 separadas por '#'
