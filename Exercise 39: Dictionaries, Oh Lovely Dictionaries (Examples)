@@ -15,38 +15,38 @@ print things
 
 stuff = {'name': 'Zed', 'age': 39, 'height': 6 * 12 + 2} # Cria um dicionário
 print stuff # Imprime dicionário
-print stuff['name'] # Imprime o conteúdo do key 'name'
+print stuff['name'] # Imprime o valor associado ao key 'name'
 # Você deve ver: Zed
 
-print stuff['age'] # Imprime o conteúdo do key 'age'
+print stuff['age'] # Imprime o valor associado ao key 'age'
 # Você deve ver: 39
 
-print stuff['height'] # Imprime o conteúdo do key 'height'
+print stuff['height'] # Imprime o valor associado ao key 'height'
 # Você deve ver: 74
 
 stuff['city'] = "San Francisco" # Insere key 'city' e conteúdo "San Francisco"
-print stuff['city'] # Imprime o conteúdo do key 'city'
+print stuff['city'] # Imprime o valor associado ao key 'city'
 # Você deve ver: San Francisco
 
-stuff[1] = "Wow" # Insere key '1' e conteúdo "Wow"
-stuff[2] = "Neato" # Insere key '2' e conteúdo "Neato"
-print stuff[1] # Imprime o conteúdo do key '1'
+stuff[1] = "Wow" # Insere key '1' e valor "Wow"
+stuff[2] = "Neato" # Insere key '2' e vakir "Neato"
+print stuff[1] # Imprime o valor associado ao key '1'
 # Você deve ver: Wow
 
-print stuff[2] # Imprime o conteúdo do key '2'
+print stuff[2] # Imprime o valor associado ao key '2'
 # Você deve ver: Neato
 
 print stuff
 # Você deve ver: {'city': 'San Francisco', 2: 'Neato', 'name': 'Zed', 1: 'Wow', 'age': 39, 'height': 74}
 
-del stuff['city'] # Apaga registro com key 'city'
+del stuff['city'] # Apaga registro do key 'city'
 print stuff
 # Você deve ver: {2: 'Neato', 'name': 'Zed', 1: 'Wow', 'age': 39, 'height': 74}
 
-del stuff[1] # Apaga registro com key '1'
+del stuff[1] # Apaga registro do key '1'
 print stuff
 # Você deve ver: {2: 'Neato', 'name': 'Zed', 'age': 39, 'height': 74}
 
-del stuff[2] # Apaga registro com key '2'
+del stuff[2] # Apaga registro do key '2'
 print stuff
 # Você deve ver: {'name': 'Zed', 'age': 39, 'height': 74}
