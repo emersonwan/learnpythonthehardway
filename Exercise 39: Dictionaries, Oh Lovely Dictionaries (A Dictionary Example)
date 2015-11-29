@@ -1,0 +1,74 @@
+# -*- coding: utf-8 -*-
+# Rodar como: python lpthw.py
+print "\nExercício 39" # Exercício 39 (A Dictionary Example)
+# create a mapping of state to abbreviation
+# Cria o dicionário states. O key é o nome do Estado; o valor é a sigla
+states = {
+	# states contém nome do Estado e sigla
+	'Oregon': 'OR',
+	'Florida': 'FL',
+	'California': 'CA',
+	'New York': 'NY',
+	'Michigan': 'MI',
+}
+
+# create a basic set of states and some cities in them
+# Cria o dicionário cities. O key é a sigla; o valor é a cidade
+cities = {
+	# cities contém sigla e nome de uma cidade no Estado
+	'CA': 'San Francisco',
+	'MI': 'Detroit',
+	'FL': 'Jacksonville',
+}
+
+# add some more cities
+cities['NY'] = 'New York' # Insere o key e o valor ao dicionário cities
+cities['OR'] = 'Portland'
+
+# print out some cities
+print "-" * 10
+print "NY State has:", cities['NY'] # Imprime o valor associado ao key 'NY' do dicionário cities
+print "OR State has:", cities['OR']
+
+# print some states
+print "-" * 10
+print "Michigan's abbreviation is:", states['Michigan'] # states['Michigan'] = 'MI' do dicionário states
+print "Florida's abbreviation is:", states['Florida']
+
+# do it by using the state then cities dict
+print "-" * 10
+print "Michigan has:", cities[states['Michigan']] # states['Michigan'] = 'MI'
+# O valor associado ao key MI no dicionário cities é Detroit
+print "Florida has:", cities[states['Florida']] # states['Florida'] = 'FL'
+# O valor associado ao key FL no dicionário cities é Jacksonville
+
+# print every state abbreviation
+print "-" * 10
+for state, abbrev in states.items(): # states.items() retorna o key e o valor
+	print "%s is abbreviated %s" % (state, abbrev) # Imprime o key e o valor
+
+# print every city in state
+print "-" * 10
+for abbrev, city in cities.items(): # cities.items() retorna o key e o valor
+	print "%s has the city %s" % (abbrev, city) # Imprime o key e o valor
+
+# now do both at the same time
+print "-" * 10
+for state, abbrev in states.items():
+	print "%s state is abbreviated %s and has city %s" % (state, abbrev, cities[abbrev])
+	# states.items() retorna o Estado e a sigla.
+	# cities[abbrev] retorna a cidade associada à sigla
+	# Exemplo: Se abbrev = 'CA', então cities['CA'] é San Francisco
+
+print "-" * 10
+# safely get an abbreviation by state that might not be there
+state = states.get('Texas') # O método get() retorna o valor para um dado key.
+# Se o key não existir, retorna o valor padrão None.
+
+if not state: # not state é True se o resultado de get('Texas') é None
+	print "Sorry, no Texas."
+
+# get a city with a default value
+city = cities.get('TX', 'Does Not Exist') # Procura por 'TX' no dicionário cities. Se não encontrar, retorna 'Does Not Exist'
+# Se fosse apenas cities.get('TX'), retornaria None
+print "The city for the state 'TX' is: %s" % city
